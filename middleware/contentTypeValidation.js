@@ -4,7 +4,7 @@ const logger = require('../middleware/logger') // Імпортуємо логе�
 function validateContentType(req, res, next) {
 	const contentType = req.headers['content-type']
 
-	// Проверяем, что тип контента соответствует ожидаемому (например, application/json)
+	// Перевіряємо, що тип контенту відповідає очікуваному (наприклад application/json)
 	if (!contentType || !contentType.includes('application/json')) {
 		logger.warn(
 			`Validation error: Unsupported Media Type ${contentType}! Only application/json supported.`
@@ -12,7 +12,7 @@ function validateContentType(req, res, next) {
 		return res
 			.status(415)
 			.send(
-				`Помилка валідації: Непідтримуваний тип медіа ${contentType}! Підтримується лише application/json.`
+				`Помилка валідації: Тип медіа не підтримується ${contentType}! Підтримується лише application/json.`
 			)
 	}
 
