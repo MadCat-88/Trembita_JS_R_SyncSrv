@@ -14,13 +14,13 @@ sudo systemctl stop rest-sync-service-node-express-js
 sudo systemctl disable rest-sync-service-node-express-js
 ```
 
-### 3. Видалити systemd unit-файл та перезавантажити конфігурацыю системи
+### 3. Видалити systemd unit-файл та перезавантажити конфігурацію системи
 ```bash
 sudo rm /etc/systemd/system/rest-sync-service-node-express-js.service
 sudo systemctl daemon-reload
 ```
 
-### 4. Видалити віртуальне середовище та файлів сервісу
+### 4. Видалити віртуальне середовище та файли сервісу
 ```bash
 cd ..
 sudo rm -rf rest-sync-service-node-express-js
